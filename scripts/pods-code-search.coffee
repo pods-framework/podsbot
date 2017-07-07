@@ -8,7 +8,7 @@
 #   None
 #
 # Commands:
-#  .code <search> - Displays the first search result from Pods.io Code Docs for the searched phrase
+#  .code <search> - Displays the first two search results from Pods.io Code Docs for the searched phrase
 #
 # Author:
 #   pmgarman, sc0ttkclark

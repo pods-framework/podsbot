@@ -8,7 +8,7 @@
 #   None
 #
 # Commands:
-#  .codex <search> - Displays the first search result from the WP Codex for the searched phrase
+#  .codex <search> - Displays the first two search results from the WP Codex for the searched phrase
 #
 # Author:
 #   pmgarman, sc0ttkclark
