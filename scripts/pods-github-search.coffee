@@ -11,10 +11,10 @@
 #  .findissue <search> - Displays the first two search results from Pods GitHub Issues for the searched phrase
 #
 # Author:
-#   pmgarman
+#   pmgarman, sc0ttkclark
 
 searchURL = 'github.com/pods-framework/pods/issues'
-searchBase = 'https://ajax.googleapis.com/ajax/services/search/web?v=1.0&q=site:' + searchURL
+searchBase = 'https://www.googleapis.com/customsearch/v1?cx=018336167779169652526:ob97f-pq5xo&key=AIzaSyB4zssabHUY9wPtWFOnY2BMKT4eMIIdu1M&q=site:' + searchURL
 
 module.exports = (robot) ->
   robot.hear /\.findissue (.+)$/i, (msg) ->
@@ -28,14 +28,14 @@ module.exports = (robot) ->
         try
           response = JSON.parse body
 
-          if response.responseData is 'null'
+          if response.items is 'null'
             msg.send 'No results found.'
           else
-            found = response.responseData.results[0].titleNoFormatting.replace( new RegExp( '/\s\u00B7\spods\-framework.*/' ), '' )
-            msg.send found + ' - ' + response.responseData.results[0].url
-            if response.responseData.results[1].url isnt 'undefined'
-              found2 = response.responseData.results[1].titleNoFormatting.replace( new RegExp( '/\s\u00B7\spods\-framework.*/' ), '' )
-              msg.send found2 + ' - ' + response.responseData.results[1].url
+            found = response.items[0].title.replace( new RegExp( '/\s\u00B7\spods\-framework.*/' ), '' )
+            msg.send found + ' - ' + response.items[0].link
+            if response.items[1].link isnt 'undefined'
+              found2 = response.items[1].title.replace( new RegExp( '/\s\u00B7\spods\-framework.*/' ), '' )
+              msg.send found2 + ' - ' + response.items[1].link
 
         catch
           return
