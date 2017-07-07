@@ -3,6 +3,5 @@
   "hubot-help",
   "hubot-heroku-keepalive",
   "hubot-redis-brain",
-  "slack-github-issues",
   "hubot-slack-github-issue-link"
 ]
