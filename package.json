@@ -1,0 +1,22 @@
+{
+  "name": "PodsBot",
+  "version": "0.0.0",
+  "private": true,
+  "author": "Scott Kingsley Clark <scott@pods.io>",
+  "description": "Bot but not a Cyberman",
+  "dependencies": {
+    "hubot": "^2.19.0",
+    "hubot-diagnostics": "0.0.2",
+    "hubot-github": "^0.2.0",
+    "hubot-help": "^0.2.2",
+    "hubot-heroku-keepalive": "^1.0.3",
+    "hubot-redis-brain": "0.0.4",
+    "hubot-scripts": "^2.17.2",
+    "hubot-slack": "^4.3.4",
+    "hubot-slack-github-issue-link": "0.0.3",
+    "slack-github-issues": "^1.1.1"
+  },
+  "engines": {
+    "node": "0.10.x"
+  }
+}
